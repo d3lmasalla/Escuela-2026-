@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Barlow+Condensed:ital,wght@0,300;0,400;0,700;0,900;1,300;1,700;1,900&display=swap');
+
+@theme {
+  --font-bebas: "Bebas Neue", sans-serif;
+  --font-mono: "DM Mono", monospace;
+  --font-barlow: "Barlow Condensed", sans-serif;
+
+  --color-lime: #CBFB04;
+  --color-dim: #1A1A1A;
+  --color-off-white: #F5F5F0;
+
+  /* Custom Professional Breakpoints */
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1200px;
+}
+
+@layer base {
+  body {
+    @apply bg-[#050505] text-[#F5F5F0] font-barlow antialiased cursor-crosshair overflow-x-hidden;
+  }
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  animation: ticker 22s linear infinite;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px #222;
+}
